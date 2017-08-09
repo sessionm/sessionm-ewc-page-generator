@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>loyalty.js</title>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+          crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/basicModal/3.3.8/basicModal.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/basicModal/3.3.8/basicModal.min.js"></script>
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <script src="./loyalty.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="custom-styles.css">
+        <link rel="stylesheet" type="text/css" href="./loyalty.css">
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+        <!-- <button id="account"> Drangalang </button> -->
+        <div class="row" id="headerWrap">
+            <div class="container" id="header">
+                <div class="col-lg-3">
+                    <a href="/">
+                        <img id="logo" src="./header.png" />
+                    </a>
+                </div>
+                <div class="col-lg-5" id="greeting">
+                    Welcome
+                </div>
+                <div class="col-lg-3">
+                    <div id="oAuth"></div>
+                </div>
+                <div class="col-lg-1" >
+                    <i class="fa fa-id-card-o" id="account"></i>
+                </div>
+            </div>
+        </div>
+        <div class="wrap container">
+            <div class="row">
+                <div id="balanceBar"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div id="rewardStore"></div>
+                    </div>
+                    <div class="row">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div id="earnFeed"></div>
+                </div>
+            </div>
+            <div class="row bottom">
+                <div class="col-lg-6">
+                    <div id="inboxNav"></div>
+                    <div id="inbox"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="ordersTitle">Your Orders</div>
+                    <div id="orders"></div>
+                </div>
+            </div>
+        </div>
+        <div class="" id="footerWrap">
+            <div class="container" id="footer">
+                <div class="col-lg-5 info">
+                    Copyright © 2008 SessionM
+                    <img id="footerLogo" src="./header.png" />
+                </div>
+                <div class="col-lg-3">
+                    <div class="license">
+                        loyalty.js is licensed under the
+                        MIT License
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-google"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        // to initialize the library manually, pass in the parameter `authToken`
+        var loyaltyjs = new LoyaltyJS({
+            "apiKey" : "<%= @api_key %>",
+            "baseUrl": "<%= @base_url %>",
+            "anonToken": "<%= @anon_token %>"
+        })
+
+        loyaltyjs.getUserInfo().then((info) => {
+            console.log(info);
+            $('#greeting').text(`Welcome, ${info.firstName}!`);
+        });
+        loyaltyjs.catchError(function(err) {
+            console.log(err);
+        });
+
+        loyaltyjs.createLoginButton({
+            "id": "oAuth",
+            "config": {
+                "loginUrl": "<%= @login_url %>",
+                "clientId": "<%= @client_id %>",
+                "callbackUrl": "<%= @callback_url %>"
+            }
+        });
+        loyaltyjs.createBalanceBar({
+            "id": "balanceBar"
+        });
+        loyaltyjs.createEarnFeed({
+            "id": "earnFeed"
+        });
+        loyaltyjs.createRewardStore({
+            "id": "rewardStore",
+            "config": {
+                "maxOffers": 6,
+                "showMoreIncrement": 3,
+            }
+        });
+        loyaltyjs.createInboxNotifier({
+            "id": "inboxNav"
+        });
+        loyaltyjs.createInbox({
+            "id": "inbox"
+        });
+        loyaltyjs.createOrderFeed({
+            "id": "orders"
+        });
+
+        $('#account').on('click', function() {
+            basicModal.show({
+                body: '<div class="" id="account-settings"></div>',
+                closable: true,
+                buttons: {
+                    action: {
+                        title: 'Dismiss',
+                        fn: basicModal.close
+                    }
+                }
+            });
+            loyaltyjs.createAccount({
+                "id": "account-settings"
+            });
+        });
+
+    </script>
+</html>

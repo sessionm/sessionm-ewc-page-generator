@@ -1,0 +1,191 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #fdfdfd;
+
+}
+
+.sessionm-app * {
+    font-family: arial !important;
+}
+
+.bottom {
+}
+
+#header {
+    margin-top: 1em;
+}
+
+#footer {
+    margin-top: 1em;
+    padding: 5em;
+}
+
+#account {
+    color: grey;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    width: 55px;
+    cursor: pointer;
+    height: 55px;
+    font-size: 25px;
+    padding-top: 13px;
+    padding-left:13px;
+    position: relative;
+    top: 17px;
+}
+#account:hover {
+    background: rgba(0,0,0,.05);
+}
+
+.license, .info {
+    text-align: center;
+    color: #aaa;
+    font-size: .8em;
+}
+
+.license {
+    padding-top: 1.5em;
+}
+
+#footerWrap, #headerWrap {
+    margin: 0;
+    margin-bottom: 1em;
+    background: #f5f5f5;
+}
+#footerWrap {
+    margin: 0;
+    background: #f5f5f5;
+}
+#footer i {
+    background: #a5c161;
+    border-radius: 50%;
+    font-size: 1.5em;
+    float: right;
+    color: white;
+    width: 2em;
+    height: 2em;
+    margin: .5em;
+    padding-left: 13px;
+    padding-top: 11px;
+    position: relative;
+    bottom: 3px;
+}
+#footerLogo {
+    width: 150px;
+    padding: 1em;
+    position: relative;
+    bottom: 2px;
+}
+#inbox {
+    border: 1px solid rgb(229, 229, 229);
+    overflow-y: scroll;
+    max-height: 800px !important;
+}
+#oAuth .sessionm-app{
+    background: none;
+    position: relative;
+left: 50px;
+}
+.sessionm-oauth-button {
+    background: white;
+}
+#rewardStore {
+    background: white;
+}
+
+#logo {
+    width:100%;
+}
+
+#earnFeed {
+    background: white;
+    height:600px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+#balanceBar {
+    border-left: 1px solid rgb(229, 229, 229);
+    border-right: 1px solid rgb(229, 229, 229);
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+#orders {
+    margin-top: 1em;
+    overflow-y: scroll;
+    max-height: 800px;
+    margin: 0;
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+#ordersTitle {
+        font-family: arial !important;
+        padding: 1em;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+}
+#greeting {
+    padding: 1em;
+    text-align: center;
+    font-size: 2em;
+}
+
+#inboxNav .sessionm-app {
+    background: none;
+}
+
+.wrap {
+    overflow: auto;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.column-section {
+    float: left;
+    overflow: auto;
+    margin: 0 auto;
+    padding: 1em;
+    background: none;
+    width:1100px;
+}
+
+.buttons {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    height: 0;
+    margin-top: -40px;
+}
+.buttons a {
+    float: left;
+    color: white;
+    top: 50px;
+    position: relative;
+    text-decoration: none;
+    font: icon;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 100;
+    padding-left: 15px;
+    padding-right: 15px;
+    letter-spacing: 1px;
+}
+.buttons a:hover {
+    background: rgba(255,255,255,.1);
+}
+.navwrap {
+    width: 100%;
+    display: block;
+    overflow: auto;
+}
+
+.navwrap img{
+    width: 200px;
+    margin: 1em;
+}
