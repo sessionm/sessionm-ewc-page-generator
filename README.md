@@ -14,13 +14,20 @@ $ ./bin/generate -h
 ```
 
 # Options
-+    -a, --apiKey API_KEY             API Key
-+    -b, --baseUrl BASE_URL           Base URL
-+    -t, --anonToken ANON_TOKEN       Anonymous User Token
-+    -l, --loginUrl LOGIN_URL         Login URL
-+    -i, --clientId CLIENT_ID         Client ID
-+    -c, --callbackUrl CALLBACK_URL   Callback URL
 
+```
+    -a, --apiKey API_KEY             API Key
+
+    -b, --baseUrl BASE_URL           Base URL
+
+    -t, --anonToken ANON_TOKEN       Anonymous User Token
+
+    -l, --loginUrl LOGIN_URL         Login URL
+
+    -i, --clientId CLIENT_ID         Client ID
+
+    -c, --callbackUrl CALLBACK_URL   Callback URL
+```
 # Output
 
 Goes into the `./build` directory. You can then host it anywhere you want!
