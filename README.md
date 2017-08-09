@@ -10,7 +10,7 @@ This is a Ruby script to help you generate a base LoyaltyJS experience.
 # Usage
 
 ```shell
-$ ./bin/smashing -h
+$ ./bin/generate -h
 ```
 
 # Options
