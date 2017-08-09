@@ -27,6 +27,13 @@ OptionParser.new do |opts|
   end
 end.parse!
 
+def copy_files
+  FileUtils.cp('./assets/loyalty.css', './build')
+  FileUtils.cp('./assets/loyalty.js', './build')
+  FileUtils.cp('./assets/custom-styles.css', './build')
+  FileUtils.cp('./assets/header.png', './build')
+end
+
 # the magic happens here
 class Smashing
   attr_reader :api_key, :base_url, :anon_token,
@@ -42,14 +49,11 @@ class Smashing
   end
 
   def build
-    my_binding = binding
+    FileUtils.mkdir_p('./build')
     template = File.read('./assets/template.html.erb')
-    built = ERB.new(template).result(my_binding)
+    built = ERB.new(template).result(binding)
     File.write('./build/index.html', built)
-    FileUtils.cp('./assets/loyalty.css', './build')
-    FileUtils.cp('./assets/loyalty.js', './build')
-    FileUtils.cp('./assets/custom-styles.css', './build')
-    FileUtils.cp('./assets/header.png', './build')
+    copy_files
     puts 'check output in ./build/'
   end
 end
