@@ -23,7 +23,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  faker
+  faker (~> 1.0)
   rspec (~> 3.0)
   rspec-mocks (~> 3.0)
 
