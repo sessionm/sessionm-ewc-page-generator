@@ -11,6 +11,8 @@ engines:
       languages:
       - ruby:
       - javascript:
+ratings:
+  - "**.rb"
 exclude_paths:
   - build/**
   - assets/**
