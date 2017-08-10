@@ -3,3 +3,5 @@ rvm:
   - 2.4.1
 install: bundle install
 script: rspec
+env:
+  CODECLIMATE_REPO_TOKEN: b8f9cf06d06cae447e44296b6628c8bc6b0ee106f1acbc36d4336cbbf27e4f0a
