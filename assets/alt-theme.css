@@ -1,0 +1,187 @@
+body {
+    background: #1b1b1b;
+    padding: 0;
+    margin: 0;
+}
+
+.sessionm-app * {
+    font-family: arial !important;
+}
+#oAuth {
+    width: 230px;
+    float: right;
+}
+#rewardStore {
+    height: auto;
+    overflow: auto;
+    background: white;
+    margin: 0 auto;
+    float: left;
+    width: 100%;
+}
+#earnFeed {
+    margin: 0 auto;
+    width: 50%;
+    overflow: auto;
+    background: white;
+    float: left;
+    min-width: 260px;
+    margin-top:1em;
+}
+
+#left {
+    width: 100%;
+}
+
+#right {
+    width: 100%;
+}
+
+#inbox {
+    width: 49%;
+    float: right;
+    border: none;
+}
+
+.sessionm-message {
+    border-bottom: 1px solid #333 !important;
+    color: #EEE !important;
+}
+
+.sessionm-message-subject, .sessionm-message-subject {
+    color: #EEE !important;
+
+}
+
+.sessionm-delete-wrapper:hover {
+    background: rgba(255,255,255, .1) !important;
+}
+.sessionm-message-clickarea:hover {
+    background: rgba(255,255,255, .1) !important;
+}
+#inboxNav {
+    width: 49%;
+    float: right;
+    margin-top:1em;
+    color: #EEE !important;
+}
+
+#balanceBar {
+    border-left: 1px solid rgb(229, 229, 229);
+    border-right: 1px solid rgb(229, 229, 229);
+    margin-bottom: 1em;
+}
+
+.sessionm-app {
+    background: #292929;
+}
+
+#oAuth .sessionm-app{
+    background: none;
+}
+#balanceBar {
+    border: none;
+}
+
+#earnFeed, .sessionm-earn-feed{
+    background: none !important;
+    border: none !important;
+
+}
+.sessionm-balance-bar {
+    background: #292929;
+    color: white;
+    border: none;
+}
+.sessionm-reward-feed {
+    background: #292929;
+    border: none;
+}
+.sessionm-offer-type-tag {
+    background: #9C3B58 !important;
+}
+
+.sessionm-filter-apply-button {
+    background: #383838 !important;
+    margin-bottom: 9px;
+}
+.remove {
+    background: #752D42 !important;
+}
+.sessionm-filter-buttons,
+.sessionm-filter-dropdown,
+.sessionm-sort-select {
+    background: #464646 !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 0 !important;
+}
+.sessionm-filter-type, .sessionm-oauth-button, #themer {
+    color: white !important;
+    border: none !important;
+    background: #464646;
+}
+
+.sessionm-filter-type {
+    background: none !important;
+}
+.sessionm-filter-type:hover,
+.sessionm-oauth-button:hover,
+#themer:hover {
+    background: #525252;
+
+}
+
+.sessionm-earn-tile {
+    background: none !important;
+    color: #efefef !important;
+    border: none !important;
+}
+
+.sessionm-earn-tile-points-coin{
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    animation: none !important;
+    background: #3a3a3a !important;
+    width: 40px;
+    height: 40px;
+    padding-left: 7px;
+}
+
+.sessionm-reload-wrapper{
+    color: #999;
+}
+
+.sessionm-reload-wrapper .sessionm-reload{
+    border: 1px solid #777 ;
+    color: #999;
+}
+
+.sessionm-reload-wrapper .sessionm-reload:hover {
+    background: #333;
+}
+
+@media (max-width: 786px) {
+    #inbox {
+        width: 100%;
+        float: none;
+    }
+    #earnFeed {
+        width: 100%;
+        float: none;
+    }
+    #inboxNav {
+        width: 100%;
+        float: none;
+    }
+    .sessionm-sort-select, .sessionm-filter-dropdown, .sessionm-filter-type {
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+    }
+
+    .sessionm-sort-wrapper {
+        border-bottom: 1px solid #555 !important;
+    }
+}

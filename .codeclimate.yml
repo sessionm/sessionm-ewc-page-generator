@@ -1,0 +1,16 @@
+engines:
+  rubocop:
+    enabled: true
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby:
+      - javascript:
+exclude_paths:
+  - build/**
+  - assets/**
