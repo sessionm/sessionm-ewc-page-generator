@@ -2,6 +2,7 @@
 [![Built with Spacemacs](https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg)](http://spacemacs.org)
 [![Build Status](https://travis-ci.org/sessionm/sessionm-ewc-page-generator.svg?branch=master)](https://travis-ci.org/sessionm/sessionm-ewc-page-generator)
 [![Code Climate](https://img.shields.io/codeclimate/github/sessionm/sessionm-ewc-page-generator.svg)](https://codeclimate.com/github/sessionm/sessionm-ewc-page-generator)
+[![GitHub release](https://img.shields.io/github/release/sessionm/sessionm-ewc-page-generator.svg)](https://github.com/sessionm/sessionm-ewc-page-generator/releases)
 
 This is a Ruby script to help you generate a base LoyaltyJS experience.
 
