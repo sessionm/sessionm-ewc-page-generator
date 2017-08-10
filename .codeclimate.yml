@@ -12,7 +12,8 @@ engines:
       - ruby:
       - javascript:
 ratings:
-  - "**.rb"
+  paths:
+    - "**.rb"
 exclude_paths:
   - build/**
   - assets/**
